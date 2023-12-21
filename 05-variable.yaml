@@ -1,0 +1,7 @@
+- name: cheking play with variable
+  hosts: localhost
+  var-file:
+  tasks:
+  - name: check variable
+    ansible.builtin.debug:
+      msg:"hi,iam learing {{}},trainer is {{}},and duration {{}}"
