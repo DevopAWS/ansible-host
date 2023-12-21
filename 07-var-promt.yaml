@@ -11,8 +11,8 @@
     private: false
   
   tasks:
-  - name: print a message
-    ansible.builtn.debug:
-      msg: "username:{{USERNAME}},password:{{PASSWORD}}"
+    - name: print a massege
+      ansible.builtn.debug:
+        msg: "username:{{USERNAME}},password:{{PASSWORD}}"
 
 
