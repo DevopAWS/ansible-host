@@ -1,0 +1,22 @@
+- name: conditions
+  hosts: localhost
+  become: yes
+
+  takss:
+    - name: checking roboshop user exists or not
+      ansible.builtin.command: roboshop
+      register: user
+      ignore_errors: true
+
+    - name: print the variable value
+      ansible.builtin.debug:
+        msg: "user output is : {{USER}} "
+
+    - name: print return code
+      ansible.builtin.debug:
+        msg: "status is : {{user.rc}}"
+
+    - name: crete user
+      ansible.builtin.user:
+        name: roboshop
+      when: user.rc !=0  
