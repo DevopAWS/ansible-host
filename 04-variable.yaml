@@ -1,0 +1,10 @@
+- name: variable from play level
+  hosts: localhost
+  vars:
+    course: "devops"
+    trainer: "suresh"
+    duration: ""120hrs
+  tasks:
+  - name: check variable
+    ansible.builtin.debug:
+      msg:"hi,iam learing {{course}},trainer {{trainer}},duration {{duration}}"
