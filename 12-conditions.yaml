@@ -2,7 +2,7 @@
   hosts: localhost
   become: yes
 
-  takss:
+  tasks:
     - name: checking roboshop user exists or not
       ansible.builtin.command: roboshop
       register: user
