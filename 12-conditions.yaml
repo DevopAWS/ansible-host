@@ -10,7 +10,7 @@
 
     - name: print the variable value
       ansible.builtin.debug:
-        msg: "user output is : {{USER}} "
+        msg: "user output is :{{USER}} "
 
     - name: print return code
       ansible.builtin.debug:
